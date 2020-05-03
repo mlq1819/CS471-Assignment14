@@ -50,3 +50,10 @@ d???) Does hLen have anything to do with sum or head?
 2. What is the value of hLen myLength [4,5,6]?
 	That's easy: 3.
 	myLength works similarly to hLen, but without calling any other functions. myLength is recursive, and instead just obtains the length of any given list, with no notable side effects. hLen is a strange function that, as previously described, acts like myLength for the first element before calling the provided function on the remaining elements. As such, it behaves like myLength for the first element, then adds that to the return value from calling myLength on the remaining value, which is precisely the same as simply calling myLength on the original list.
+	
+3. What is the relationship between hLen and myLength?
+	Whoops, accidentally did this question before I got to it. Basically, hLen acts like myLength on the first element before calling the provided function on the remaining list, adding the two return values together. In both hLen and myLength, the value of the first element is ignored, and the only importance that element holds for either function is whether it exists; the difference is that hLen might care about the values of the remaining elements, while myLength does not differentiate between the various elements in its list, and disregards all stored values, instead noting whether they exist or not.
+	
+	
+Part C: Factorial
+Add more stuff to the Haskell file and reload.
