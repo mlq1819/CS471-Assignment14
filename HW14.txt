@@ -57,3 +57,4 @@ d???) Does hLen have anything to do with sum or head?
 	
 Part C: Factorial
 Add more stuff to the Haskell file and reload.
+1. Define hfact to be a lambda abstraction such that it takes a function as an argument, and returns another function, similar to hLen. Write this so that hFact factorial = factorial. What is the type of hFact?
