@@ -1,1 +1,30 @@
 Michael Quinn
+
+Part A: Do but don't need to hand in
+1. What is the type of  (\x -> x)?
+	It is of type p -> p
+	
+2. What is the value of the following?
+a) (\x -> x) 3
+	3
+b) (\x -> x) (+) 5 3
+	8
+c) (\x -> x) (+)
+	No value, causes an error (not enough arguments as it is an application)
+d) What would be a descriptive name for the abstractions in 2.b?
+	No value, causes a parse error on "in"
+	That said, 2.b would be considered an application expression
+
+3. What is the value of the following?
+a) (\x -> x +x ) 3
+	6
+b) What is the expression ? (E)
+	No value, causes multiple errors.
+	That said, the expression for (a) is x -> x +x
+
+4. What is the value of the following?
+a) (\x -> 3) 6
+	3
+b) What would be a descriptive name for this abstractions?
+	No value, causes multiple errors.
+	That said, 4.a would be considered an abstraction expression into a variable expression
