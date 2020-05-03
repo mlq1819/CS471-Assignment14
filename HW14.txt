@@ -57,4 +57,15 @@ d???) Does hLen have anything to do with sum or head?
 	
 Part C: Factorial
 Add more stuff to the Haskell file and reload.
-1. Define hfact to be a lambda abstraction such that it takes a function as an argument, and returns another function, similar to hLen. Write this so that hFact factorial = factorial. What is the type of hFact?
+1. Define hFact to be a lambda abstraction such that it takes a function as an argument, and returns another function, similar to hLen. Write this so that hFact factorial = factorial. What is the type of hFact?
+	Alright, wrote hFact. Not 100% sure I wrote it as a lambda expression though.
+	hFact is of type p -> p
+
+2. Apply hFact to ( ^ 2) -- What is the value of hFact (^ 2) 5?
+	25
+	
+3. What is the value of hFact factorial 5? Is it the same value as factorial 5?
+	120, and yes, it is the same value as factorial 5; they are also both the same type (Integral a => a)
+
+
+Part D: General definition
