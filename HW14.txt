@@ -28,3 +28,25 @@ a) (\x -> 3) 6
 b) What would be a descriptive name for this abstractions?
 	No value, causes multiple errors.
 	That said, 4.a would be considered an abstraction expression into a variable expression
+
+
+Part B: What do we do with the ??? ?
+Type a specific non-recursive definition into a file and load it
+
+1. Look at hLen
+consider it looked at
+a) Is hLen recursive? Why or why not?
+	Well we know it's not because a. we've been told it's not recursive. But properly we know it's not recursive because hLen doesn't call itself anywhere in its definition, or reference any function that references other functions etc. down to hLen again. The only way it could be considered recursive is if it is provided a recursive function as an argument.
+b) Is hLen a Higher Order Function? Why or why not?
+	Yes; in Haskell, lambda expressions are considered functions, and hLen accepts one as an argument, fulfilling the definition for a Higher Order Function.
+c) What is the value of the following:
+i. hLen sum [4,5,6]
+	12
+ii. hLen head [4,5,6]
+	6
+d???) Does hLen have anything to do with sum or head?
+	hLen is a weird function. Basically it just calls the function on the tail of the provided list and adds 1; for instance, in 4.c.i it just calls sum on [5,6] and adds 1, getting 12, where sum [4,5,6] would be 15. On hLen head, it does the same, getting the head of the tail; effectively, it will return the second element of the list, with 1 added to it. The only exceptions are when the list is empty, in which it returns 0, or when there is only one element in the list, in which case it attempts to call the provided function on the empty list, and adds 1 to whatever the function decides to return. In the case of sum, that's easy: it'll always return 1, but head returns an error on the empty list.
+
+2. What is the value of hLen myLength [4,5,6]?
+	That's easy: 3.
+	myLength works similarly to hLen, but without calling any other functions. myLength is recursive, and instead just obtains the length of any given list, with no notable side effects. hLen is a strange function that, as previously described, acts like myLength for the first element before calling the provided function on the remaining elements. As such, it behaves like myLength for the first element, then adds that to the return value from calling myLength on the remaining value, which is precisely the same as simply calling myLength on the original list.
