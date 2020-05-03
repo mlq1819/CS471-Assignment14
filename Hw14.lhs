@@ -13,3 +13,4 @@ Part C: Factorial
 Part D: General definition
 
 > factorial' = hFact factorial'
+> fix f = f (fix f)
