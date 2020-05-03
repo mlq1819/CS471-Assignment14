@@ -75,6 +75,19 @@ What is the type of factorial'?
 	
 2. Now define another function.
 a) What is the type of fix?
+	fix is of type (t -> 5) -> 5
+b) What is the difference between
+> fix f = f (fix f )
+and
+> fix f = f fix f
+	In the first, calling fix f will produce the result of calling f on fix f, while in the second, calling fix f will produce the result of calling the result of f fix on f. This might be the same in some cases, but can definitely produce different outcomes.
 	
-b) What is the difference between the code below?
-	
+3. Combining a lot of things, what are the values for the following?
+a) factorial 4
+	24
+b) hFact factorial 4
+	24
+c) factorial' 4
+	Nothing happens, infinite loop; factorial' is an infinite recursion on itself, unless the ' at the end of factorial as defined in the description of factorial' in Part D question 4 was a typo.
+d) fix hFact 4
+	Nothing happens, infinite loop; similarly it is an infinite recursion on itself, trying to call hFact on fix hFact, and will only care about the 4 once fix hFact resolves, which it never will.
