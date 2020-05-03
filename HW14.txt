@@ -69,3 +69,6 @@ Add more stuff to the Haskell file and reload.
 
 
 Part D: General definition
+1. Add a specific definition for factorial' to the Haskell file.
+What is the type of factorial'?
+	

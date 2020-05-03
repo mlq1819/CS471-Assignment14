@@ -9,3 +9,7 @@ Part C: Factorial
 > factorial :: Integral a => a -> a
 > factorial n = if n ==0 then 1 else n * (factorial (n-1))
 > hFact = (\f -> f)
+
+Part D: General definition
+
+> factorial' = hFact factorial'
